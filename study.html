@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jong's study of Internet Programing</title>
+    <style>
+        h1 {
+            color: white;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="head"> 인터넷 프로그래밍 정리</h1>
+    <hr>
+    <h2> 기본 구조 </h2>
+    <p> 1. HTML은 CSS, HTML, JSP로 이루어지며, 그 구조는 아래의 사진을 따른다.
+    </p>
+    <img src="basic sturcture.jpg">
+
+    <hr>
+    <h2> 제목에 색상 넣기</h2>
+    <p>
+    <pre>2. 제목은 h1, h2... 의 태그를 이용한다. 각 태그는 n번째로 큰 제목 글자이다.
+이때 head에 색상을 주는 방법은 아래와 같다.
+(style) 
+ h1(
+  color : ~~ 
+  background : ~~ 
+ ) 
+(/style)
+        </pre>
+    </p>
+
+    <hr>
+    <h2> 글자태그</h2>
+    <p>
+        공간 : (p)는 글자를 넣을 공간 <br>
+        줄바꿈 : (br)은 줄바꿈 <br>
+        수평줄 : (hr)은 수평줄 삽입, br과 달리 중간에 넣지 못한다. <br>
+        띄어쓰기 : &nbsp(;)는 괄호를 제외 띄어쓰기, 3개이상일 때 사용 <br>
+        괄호 : (&)lt는 좌측 < 이고, (&)gt는 우측> 이다.
+    </p>
+
+    <hr>
+    <h2> 하이퍼링크 : 앵커태그 </h2>
+    <p>
+        태그 a는 하이퍼링크 생성을 의미하며 문법은 다음과 같다. <br>
+        (a href = "http : ~~")출력 글자(/a) <br> <br>
+        이를 통해 구현한 하이퍼링크는 다음과 같다. <br>
+        <a href="http://lipsum.com">로렘입섬</a> <br> <br>
+        웹 페이지 내부로 이동하려면 (a href = "#abcd")출력글자(/a)이고, 그 내용에는 id="abcd"의 태그를 붙여줘야 한다. <br>
+        제목으로 이동하는 예시를 보여주면, <a href="#head">제목</a>
+    </p>
+
+    <hr>
+    <h2> 글자모양 태그</h2>
+    <p>
+        글자모양 태그는 헤드와 p를 감싸도 되고, 그 안에 필요한 만큼만 존재해도 된다. <br> <br>
+        <b>굵은 글자 : (b) </b> <br>
+        <i>기울어진 글자 : (i) </i> <br>
+        <small>작은 글자 : (small) </small> <br>
+        <sub> 아래첨자 : (sub) </sub> <br>
+        <sup> 위첨자 : (sup) </sup> <br>
+        <ins> 밑줄 글자 : (ins) </ins> <br>
+        <del> 취소선 : (del) </del> <br>
+    </p>
+
+    <hr>
+    <h2> 목록 만들기 </h2>
+    <p> 태그는 3가지이고 그 예시는 아래 제시한다.<br> <br>
+        (ul) : 순서가 없는 목록 <br>
+        (ol) : 순서가 있는 목록 <br>
+        (li) : 목록 요소
+
+    <ul>
+        <li>ui안에</li>
+        <li>li가</li>
+        <li>각 구성요소로 존재한다.</li>
+    </ul>
+
+    <ol>
+        <li>ui와 oi의 차이점은</li>
+        <li>번호이다.</li>
+    </ol>
+    중첩하면 다음과 같다.
+    <ul>
+        <li>li 하나를 먼저 넣고
+            <ol>
+                <li>목록 태그를 하나 더 넣고</li>
+                <li>똑같이 li를 통해 작성한다.</li>
+                <li>요약하면</li>
+                <li>목록태그1 > li > 목록태그2 > li 작성 > 목록태그2 닫기 > li닫기 > 목록태그 1 닫기이다. </li>
+            </ol>
+        </li>
+    </ul>
+    </p>
+    <p>
+    <pre>
+그 구조는 아래와 같다.
+(ui)
+    (li)
+        (b) 굵은 글씨 범주 (/b)
+        (ol)
+            (li)작은 범주들(/li)
+            (li)작은 범주들(/li)
+            (li)작은 범주들(/li)
+        (/ol)
+    (/li)
+(/ui)
+    </pre>
+    </p>
+
+    <hr>
+    <h2> 표 : Table</h2>
+    <p>
+        기본적으로 표는 위에서부터 한줄한줄 적어간다고 생각해야 한다.<br>
+        border : 표의 테두리 굵기 <br>
+        th, td colspan : 셀의 너비 <br>
+        th, td rowspan : 셀의 높이 <br>
+        자세한 내용은 2주차 강의노트를 참고하자. <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>태그</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>tr</td>
+                <td>표에 행삽입</td>
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>표의 제목셀 생성</td>
+            </tr>
+            <tr>
+                <td>tb</td>
+                <td>표의 일반셀 생성</td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+    <p>
+    <pre>
+위의 표의 경우 다음과 같이 쓰여졌다.
+(table border = "1")
+    (thead)
+        (tr)
+            (th)태그(/th)
+            (th)설명(/th)
+        (/tr)
+        (/thead)
+    (tbody)
+        (tr)
+            (td)tr(/td)
+            (td)표에 행삽입(/td)
+        (/tr)
+        (tr)
+            (td)thead(/td)
+            (td)표의 제목셀 생성(/td)
+        (/tr)
+        (tr)
+            (td)tbody(/td)
+            (td)표의 일반셀 생성(/td)
+        (/tr)
+    (/tbody)
+(/table)
+    </pre>
+    </p>
+
+    <hr>
+    <h2> 미디어 태그 : Img, audio, video </h2>
+    <p>
+        (img src =" " alt =" ", width=" ", height=" ") <br>
+        앞에서부터 경로, 이미지 없을시 출력 문구, 너비, 높이이다. <br><br>
+
+        (audio(video) controls="controls")<br>
+        &nbsp;&nbsp; (source src = " " type="audio/mp3") <br>
+        (/audio(video))<br><br>
+        
+        위에서부터 컨트롤러 출력여부를 결정하고, 경로와 타입을 결정한다. 이후 태그를 끝낸다. <br><br>
+
+        이때 controls="" poster="http:~~"를 해두면 로딩간 이미지를 출력할 수 있다.
+    </p>
+
+
+
+</body>
+
+</html>
