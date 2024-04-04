@@ -8,12 +8,16 @@
             color: white;
             background: black;
         }
+        h3{
+            color: white;
+            background : grey;
+        }
     </style>
 </head>
 
 <body>
-    <img src = "dororo.jpg" width ="100" height = "100">
-    <img src = "keroro.jpg" width = "100" height = "100">
+    <img src="dororo.jpg" width="100" height="100">
+    <img src="keroro.jpg" width="100" height="100">
     <h1 id="head"> 인터넷 프로그래밍 정리</h1>
     <hr>
     <h2> 기본 구조 </h2>
@@ -44,6 +48,26 @@
         띄어쓰기 : &nbsp(;)는 괄호를 제외 띄어쓰기, 3개이상일 때 사용 <br>
         괄호 : (&)lt는 좌측 < 이고, (&)gt는 우측> 이다.
     </p>
+
+    <hr>
+    <h2> 공간분할태그</h2>
+    <div>
+        div의 경우 블록형식이어서 행 전체를 차지함
+    </div>
+    <p>
+        이는 (p)도 동일
+    </p>
+    <span>
+        span의 경우는 inline형식이어서 그 글자만큼 차지함 = 줄은 안넘어감 ///
+    </span>
+    <span>
+        코드상 스팬으로 나뉘어있으나, 붙어있음을 확인할 수 있음
+    </span>
+    <p>
+        h1, p, div는 블록형식이다. <br>
+        a, i, span은 인라인형식이다.<br>
+    </p>
+
 
     <hr>
     <h2> 하이퍼링크 : 앵커태그 </h2>
@@ -194,18 +218,203 @@
         아래의 방식은 get과 post의 방식이 있다. <br>
         - get : 주소에 데이터 전달, 크기 한정 <br>
         - post : 주소 변경x, 용량 제한x
-        <form>
-            <input type="text" name = "serach">
-            <input type="submit">
-        </form>
-        <br> 코드는 다음과 같다. <br>
+
+        <br><br> 코드는 다음과 같다. <br>
         (form method="get") - (meto~부터는 없어도 됨) <br>
         &nbsp;&nbsp; (input type="text" name="serach") <br>
         &nbsp;&nbsp; (input type="submit")<br>
         (form)
+    <form>
+        <input type="text" name="serach">
+        <input type="submit">
+    </form>
+    </p>
+    <p>
+    <form>
+        <!-- 사용자가 입력하는 입력 양식 -->
+        (input type="text" name="text" value="text")<br>
+        <input type="text" name="text" value="text"><br><br>
+        (input type="password" name="password” value="password")<br>
+        <input type="password" name="password” value=" password"><br><br>
+        (input type="file" name="file" value="file")<br>
+        <input type="file" name="file" value="file"><br><br>
+        (input type="checkbox" name="checkbox" value="checkbox")<br>
+        <input type="checkbox" name="checkbox" value="checkbox"><br><br>
+        (input type="radio" name="radio" value="radio")<br>
+        <input type="radio" name="radio" value="radio"><br><br>
+        <!-- 보이지 않는 입력 양식 -->
+        (input type="hidden" name="hidden" value="hidden")<br>
+        <input type="hidden" name="hidden" value="hidden"><br><br>
+        <!-- 버튼 -->
+        (input type="button" value="button")<br>
+        <input type="button" value="button"><br> <br>
+        (input type="reset" value="reset")<br>
+        <input type="reset" value="reset"><br><br>
+        (input type="submit" value="submit")<br>
+        <input type="submit" value="submit"><br><br>
+        (input type="image" src="http://via.placeholder.com/100x100")<br>
+        <input type="image" src="http://via.placeholder.com/100x100"> <br><br>
+    </form>
+    </p>
+    (label for="name")이름(/label)<br>
+    (input id="name" type="text") <br>
+    위의 코드는 input에 아이디를 설정하고, for 연결하면 클릭할 때 input으로 포커스가 감
+    <form>
+        <label for="name">이름</label>
+        <input id="name" type="text">
+    </form><br><br>
+
+    <form>
+        <table>
+            <tr>
+                <td><label for="username">이름</label></td>
+                <td><input id="username" type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input id="man" type="radio" name="gender" value="m">
+                    <label for="man">남자</label>
+                    <input id="woman" type="radio" name="gender" value="w">
+                    <label for="woman">여자</label>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="가입">
+    </form><br>
+    <p>
+    <pre>
+        위의 코드는 다음과 같다.
+        (form)
+            (table)
+                (tr)
+                    (td)(label for="username")이름(/label)(/td)
+                    (td)(input id="username" type="text" name="username")(/td)
+                (/tr)
+                (tr)
+                    (td)성별(/td)
+                    (td)
+                        (input id="man" type="radio" name="gender" value="m")
+                        (label for="man")남자(/label)
+                        (input id="woman" type="radio" name="gender" value="w")
+                        (label for="woman")여자(/label)
+                    (/td)
+                (/tr)
+            (/table)
+            (input type="submit" value="가입")
+    </pre>
+    </p>
+
+    <hr>
+    <h2> 입력 양식 태그 : 선택 가능한 입력 양식 </h2>
+    <p>
+        <select>
+            <option>(select)</option>
+            <option>(select multiple="multiple")을 붙이면 다중 선택이 가능하다</option>
+            <option>&nbsp;&nbsp;&nbsp;&nbsp; (option)A(option)</option>
+            <option>&nbsp;&nbsp;&nbsp;&nbsp; (option)b(option)</option>
+            <option>&nbsp;&nbsp;&nbsp;&nbsp; (option)C(option)</option>
+            <option>(/select)</option>
+        </select><br><br>
+
+        옵션으로 묶는 방법은 다음과 같다.
+        <select>
+            <optgroup label="(optgroup label = 'asdf')">
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; (option)A(option)</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; (option)b(option)</option>
+            </optgroup>
+            <optgroup label="(optgroup label = 'asdf')">
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; (option)C(option)</option>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp; (option)D(option)</option>
+            </optgroup>
+        </select><br><br>
+    <form>
+        <fieldset>
+            <legend>입력 양식</legend>
+            <table>
+                <tr>
+                    <td><label for="name">이름</label></td>
+                    <td><input id="name" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">이메일</label></td>
+                    <td><input id="mail" type="email"></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </fieldset>
+    </form> <br>
+    바로 위쪽에 있는 간단 입력 양식의 코드에서 form과 table 사이에 (fieldset) (legned)입력양식(/legend) ~~~~ (/fieldset)을 넣은 것이다.
+    <br><br>
+    <textarea>텍스트 에어리어의 경우 (pre) 처럼 
+            들여쓰기가 포함되기에 주의
+(textarea)
+(/textarea)</textarea>
     </p>
 
 
+    <hr>
+    <h2> 시맨틱태그 </h2>
+    <p>
+        <img src="simentic tag.jpg">
+    </p>
+    <div>
+        h3 태그의 경우 알아보기 쉽게 색깔을 바꾸었다. <br>
+        아래 코드와 그림, 출력을 대조하며 파악하자.<br>
+    </div>
+    <header>
+        <h3>HTML5 기본</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴 - 1</a></li>
+            <li>···</li>
+            <li>···</li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+        <article>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+    </section>
+    <footer>
+        <span>서울특별시 강서구 내발산동</span>
+    </footer>
+
+
+    <p><pre>
+        (header)
+            (h3)HTML5 기본(/h3)
+        (/header)
+        (nav)
+            (ul)
+                (li)(a href="#")메뉴 - 1(/a)(/li)
+                (li)···(/li)
+                (li)···(/li)
+            (/ul)
+        (/nav)
+        (section)
+            (article)
+                (h3)Lorem ipsum dolor sit amet(/h3)
+                (p)Lorem ipsum dolor sit amet.(/p)
+            (/article)
+            (article)
+                (h3)Lorem ipsum dolor sit amet(/h3)
+                (p)Lorem ipsum dolor sit amet.(/p)
+            (/article)
+        (/section)
+        (footer)
+            (span)서울특별시 강서구 내발산동(/span)
+        (/footer)
+    </pre></p>
+
+    <hr>
+    <h1> 이후부터는 CSS3에 관한 내용이다.</h1>
 
 </body>
 
