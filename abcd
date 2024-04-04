@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kang JongHyuk</title>
+    <style>
+        img {
+            display: block;
+            float: left;
+            width: 300px;
+            height: 300px;
+        }
+        figure {
+            width: 300px;
+            height: 350px;
+            background-color: beige;
+            border: 1px solid grey;
+            float: left;
+            margin: 10px;
+            padding : 5px;
+
+            position : relative;
+            top : auto;
+            left : auto;
+        }
+        figure1 {
+            width: 300px;
+            height: 350px;
+            background-color: beige;
+            border: 1px solid grey;
+            float: left;
+            margin: 10px;
+            padding : 5px;
+
+            position : relative;
+            top : auto;
+            left : auto;
+        }
+        figcaption.popup {
+            padding : 10px;
+            background : #FFCB5A;
+            position : absolute;
+            box-shadow : 0 0 15px #a9a9a9;
+            display: none;
+        }
+        figure.thumbnail:hover figcaption.popup {
+            position : absolute;
+            top : 0;
+            left : 100px;
+            display : block;
+        }
+        figcaption {
+            position : relative;
+            top : 0px;
+            left : 0px;
+        }
+        .container {
+            background-color : #4ab;
+            width: 300px;
+            margin: 50px;
+            display : flex;
+            flex-wrap : wrap;
+        }
+        .container div { 
+            background-color : #4d7583;
+            flex : 1 1 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+       Kang JongHyuk's Internet
+    </h1>
+    <p>
+        1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+        sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+        including versions of Lorem Ipsum.
+    </p>
+    <figure>
+        <img src="hanbit.jpg">
+        <figcaption>Image Example</figcaption>
+    </figure>
+    <p>
+        2. It is a long established fact that a reader will be distracted by the readable content of a page when
+        looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+        desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+        search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+        over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+    <p>
+        3. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+        College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+        going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
+        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
+        Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
+        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </p>
+    <figure1 class = "thumbnail">
+        <img src="nail.jpg">
+        <figcaption class = "popup">
+            <img src ="hanbit.jpg">
+            <p> The thumbnail of hanbit</p>
+        </figcaption>
+    </figure1>
+    <div class = "container">
+        <div class = "container div">A</div>
+        <div class = "container div">B</div>
+        <div class = "container div">C</div>
+        <div class = "container div">D</div>
+        <div class = "container div">E</div>
+    </div>
+
+</body>
+
+</html>
+
