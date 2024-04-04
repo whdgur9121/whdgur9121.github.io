@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS3 Property Basic</title>
+    <style>
+        h1 {
+            text-shadow: 5px 5px 5px black;
+            box-shadow: 10px 10px 30px black;
+            text-shadow: 5px 5px 5px black;
+        }
+        div {
+            background: linear-gradient(to right, #b4ddb4 0%,#83c783 17%,#57b5ba 33%,#008a00 47%,#008a00 47%,#57b5ba 62%,#005700 80%,#57b5ba 92%,#57b5ba 92%,#002400 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Lorem ipsum dolor amet</h1>
+    </div>
+</body>
+
+</html>
