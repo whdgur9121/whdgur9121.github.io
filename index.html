@@ -12,6 +12,18 @@
             color: white;
             background : grey;
         }
+        #ex1 {
+            width : 800px; margin : 0 auto; background-color : yellow; 
+        }
+        #ex2 {
+            width : 800px; margin : 0 auto; overflow : hidden; 
+        }
+        #ex3 {
+            color :  white; width : 200px; float : left; background : blue;
+        }
+        #ex4 {
+            color : white; width : 600px; float : left; background : green;
+        }
     </style>
 </head>
 
@@ -416,6 +428,71 @@
     <hr>
     <h1> 이후부터는 CSS3에 관한 내용이다.</h1>
 
+    <hr>
+    <h2> CSS의 기본 배경과 선택자 </h2>
+    <P>
+        CSS는 홈페이지를 이루는 HTML과는 다른 문법이라고 할 수 있다. 보통 body가 아닌 head에 스타일을 삽입하거나, 불러오는 식으로 사용한다.
+    </P>
+    <p><pre>
+        (head)
+            (title)(/title)
+            (style)
+                h1 {
+                    color : red;
+                    background-color : orange;
+                }
+            (/style)
+        (/head)
+    </pre></p>
+    <p>
+        위의 상황에서 h1은 선택자이다. 선택자는 다음과 같다.
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>형태</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>전체 선택자</td>
+                <td>&nbsp;*</td>
+            </tr>
+            <tr>
+                <td>태그 선택자</td>
+                <td>태그(ex h1, p)</td>
+            </tr>
+            <tr>
+                <td>아이디 선택자</td>
+                <td>#id</td>
+            </tr>
+            <tr>
+                <td>클래스 선택자</td>
+                <td>.class</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        태그선택자의 경우 body, p, h1 {margin:0} 처럼 사용이 가능하다. <br><br>
+        아이디 선택자는 개별적인 하나의 것을 설정하기에 좋다.  아래는 활용이다.
+    </p>
+
+    <div id="ex1">
+        (div id = "ex1")의 태그 부여 후 스타일에서 width 800px; margin : 0 auto; background-color : yello; 적용
+    </div>
+    <div id="ex2">
+        (div id = "ex2")의 태그 부여 후 스타일에서 width 800px; margin : 0 auto; overflow : hidden; 적용
+        <div id = "ex3">
+            (div id = "ex2")의 태그 부여 후 스타일에서 color : white; width 200px; float : left; background: blue; 적용
+        </div>
+        <div id = "ex4">
+            (div id = "ex2")의 태그 부여 후 스타일에서 color : white; width 600px; float : left; background: green; 적용
+        </div>
+    </div>
+
+
 </body>
 
 </html>
+
