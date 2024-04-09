@@ -24,6 +24,29 @@
         #ex4 {
             color : white; width : 600px; float : left; background : green;
         }
+        #action:hover { 
+            color : blue;
+        }
+        #action:active {
+            color : red;
+        }
+        input:enabled {background-color : ivory;}
+        input:disabled{background-color : grey;}
+        input:focus{background-color:aqua;}
+        
+        #ulexample{overflow : hidden;}
+        #ulexample>li{
+            list-style :none;
+            float: left; padding: 15px;
+        }
+        #ulexample>li:first-child {border-radius : 10px 0 0 10px;}
+        #ulexample>li:last-child {border-radius : 0 10px 10px 0;}
+        #ulexample>li:nth-child(2n) {background-color : greenYellow;}
+        #ulexample>li:nth-child(2n+1) {background-color: aquamarine;}
+        #backimage {
+            background-image: url('NAMU.jpg');
+            color : white;
+        }
     </style>
 </head>
 
@@ -491,8 +514,206 @@
         </div>
     </div>
 
+    <hr>
+    <h1>반응 선택자</h1>
+    <p>
+        반응선택자는 마우스로 클릭하거나, 커서를 올린 것을 의미한다.
+    </p>
+    <div id="action">
+        <fieldset>
+            <legend>
+                반응선택자 예시
+            </legend>
+            반응선택자 예시
+        </fieldset>
+              
+    </div>
+    <P>위 코드의 경우 style만 적용하면 된다.<br>
+        작성은 div에 id="action"을 붙인 뒤, style에서 작성했다. 
+        <br>#action:hover { color : blue;}
+        <br>#action:active { color : red;}
+    </P>
+
+    <hr>
+    <h1>상태 선택자</h1>
+    <p>
+        상태선택자의 경우는 크게 4가지의 종류로 나눌 수 있다.
+        <table border = "1">
+            <thead>
+                <tr>
+                    <th>형태</th>
+                    <th>설명</th>
+                    <th>세부 설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>:checked</td>
+                    <td>체크 상태의 input 태그 선택</td>
+                    <td>type 속성이 checkbox or radio</td>
+                </tr>
+                <tr>
+                    <td>:focus</td>
+                    <td>포커스를 맞춘 input 태그 선택</td>
+                    <td>입력 양식에 focus가 돼있다. 페이지 1개당 1개만 사용할 수 있다.</td>
+                </tr>
+                <tr>
+                    <td>:enabled</td>
+                    <td>사용 가능한 input 태그 선택</td>
+                    <td>input 태그에 값을 입력 가능</td>
+                </tr>
+                <tr>
+                    <td>:disabled</td>
+                    <td>사용 불가능한 input 태그 선택</td>
+                    <td>input 태그에 값을 입력 불가능한 상태</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        enabled, disabled <br>
+                        (input value="enabled") <br>
+                        (input value="disabled" disabled="disabled")
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        (style)<br>
+                            &nbsp;&nbsp;input:enabled {background-color : white;}<br>
+                            &nbsp;&nbsp;input:disabled {background-color: gray;}<br>
+                            &nbsp;&nbsp;input:focus {background-color: orange;}<br>
+                        (style)<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <input value="enabled">
+        <input value="disabled" disabled = "disabled">
+    </p>
+
+    <hr>
+    <h1>구조 선택자</h1>
+    <p>
+        <table border = "1">
+            <thead>
+                <tr>
+                    <th>
+                        형태
+                    </th>
+                    <th>
+                        설명
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        :first-child
+                    </td>
+                    <td>
+                        형제 관계 첫 번째 태그
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :last-child
+                    </td>
+                    <td>
+                        형제 관계 마지막 태그
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :nth-child(2n)
+                    </td>
+                    <td>
+                        형제 관계 2n번째 태그(2n+1 등으로 응용)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        :nth-last-child(수열)
+                    </td>
+                    <td>
+                        형제 관계 뒤에서 (수열)번째 태그
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <ul>
+        <li>첫 번째</li>
+        <li>두 번째</li>
+        <li>세 번째</li>
+        <li>네 번째</li>
+    </ul>
+    <ul id="ulexample">
+        <li>첫 번째</li>
+        <li>두 번째</li>
+        <li>세 번째</li>
+        <li>네 번째</li>
+    </ul>
+    <p><pre>
+        (ul)
+            (li)첫 번째(/li)
+            (li)두 번째(/li)
+            (li)세 번째(/li)
+            (li)네 번째(/li)
+        (/ul)
+        (ul id="ulexample")
+            (li)첫 번째(/li)
+            (li)두 번째(/li)
+            (li)세 번째(/li)
+            (li)네 번째(/li)
+        (/ul)
+    </pre></p>
+    <p>
+        위는 스타일을 적용한 것과 적용하지 않은 것의 차이이다.<br>
+        아래는 스타일을 적용한 코드이다.<br><br>
+        #ulexample{overflow : hidden;}<br>
+        #ulexample>li{<br>
+            &nbsp;&nbsp;list-style :none;<br>
+            &nbsp;&nbsp;float: left; padding: 15px;<br>
+        }<br>
+        #ulexample>li:first-child {border-radius : 10px 0 0 10px;}<br>
+        #ulexample>li:last-child {border-radius : 0 10px 10px 0;}<br>
+        #ulexample>li:nth-child(2n) {background-color : greenYellow;}<br>
+        #ulexample>li:nth-child(2n+1) {background-color: aquamarine;}<br>
+
+        같은 태그여도 first-child(1) 등으로 분류할 수 있다는 점 참고하자.
+    </p>
+
+    <hr>
+    <h1>키워드 단위</h1>
+    <p>
+        W3C에서 지정한 단위이다.<br>
+
+        <br> % : 백분율 단위 > {font-size : 150%;(100%;)}
+        <br> em : 배수 단위 > {font-size : 1.0em;(1.5em;)}
+        <br> px : 픽셀 단위(절대적 크기) > {font-size: 16px;(32px;)}
+        <br> mm : mm 단위
+        <br> inch : inch 단위
+        <br> cm : cm단위
+    </p>
+
+    <hr>
+    <h1>색상 단위</h1>
+    <p>
+        RGB : tag {background-color : rgb(255, 255, 255)}<br>
+        RGBA : tag {background-color : rgba(255, 255, 255, 투명도0.5)}<br>
+        HEX : tag {background-color : #001122}
+    </p>
+
+    <hr>
+    <h1>URL단위</h1>
+    <div id="backimage">
+        이미지를 다음과 같이 추가할 수 있다.
+        style에 tag {background-image:url('이미지명.jpg')}<br><br>
+    </div>
+
+    <hr>
+    <h1>다음에 계속,,</h1>
+
 
 </body>
 
 </html>
-
