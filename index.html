@@ -8,44 +8,131 @@
             color: white;
             background: black;
         }
-        h3{
+
+        h3 {
             color: white;
-            background : grey;
+            background: grey;
         }
+
         #ex1 {
-            width : 800px; margin : 0 auto; background-color : yellow; 
+            width: 800px;
+            margin: 0 auto;
+            background-color: yellow;
         }
+
         #ex2 {
-            width : 800px; margin : 0 auto; overflow : hidden; 
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
         }
+
         #ex3 {
-            color :  white; width : 200px; float : left; background : blue;
+            color: white;
+            width: 200px;
+            float: left;
+            background: blue;
         }
+
         #ex4 {
-            color : white; width : 600px; float : left; background : green;
+            color: white;
+            width: 600px;
+            float: left;
+            background: green;
         }
-        #action:hover { 
-            color : blue;
+
+        #action:hover {
+            color: blue;
         }
+
         #action:active {
-            color : red;
+            color: red;
         }
-        input:enabled {background-color : ivory;}
-        input:disabled{background-color : grey;}
-        input:focus{background-color:aqua;}
-        
-        #ulexample{overflow : hidden;}
-        #ulexample>li{
-            list-style :none;
-            float: left; padding: 15px;
+
+        input:enabled {
+            background-color: ivory;
         }
-        #ulexample>li:first-child {border-radius : 10px 0 0 10px;}
-        #ulexample>li:last-child {border-radius : 0 10px 10px 0;}
-        #ulexample>li:nth-child(2n) {background-color : greenYellow;}
-        #ulexample>li:nth-child(2n+1) {background-color: aquamarine;}
+
+        input:disabled {
+            background-color: grey;
+        }
+
+        input:focus {
+            background-color: aqua;
+        }
+
+        #ulexample {
+            overflow: hidden;
+        }
+
+        #ulexample>li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+        }
+
+        #ulexample>li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #ulexample>li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        #ulexample>li:nth-child(2n) {
+            background-color: greenYellow;
+        }
+
+        #ulexample>li:nth-child(2n+1) {
+            background-color: aquamarine;
+        }
+
         #backimage {
             background-image: url('NAMU.jpg');
-            color : white;
+            color: white;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            border: 20px solid black;
+            margin: 10px;
+            padding: 30px;
+        }
+
+        .box {
+            border-width: thick;
+            border-style: dashed;
+            border-color: black;
+            border-radius: 20px;
+        }
+
+        #udong {
+            float: left;
+        }
+
+        #Shadow {
+            text-shadow: 10px 10px 10px black, 10px 10px 10px orange;
+        }
+
+        #gradient {
+            font-family: 'Times New Roman';
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background: #f85032;
+            /* FF3.6+ */
+            background: -moz-linear-gradient(top, #f85032 0%, #f16f5c 50%,
+                    #f6290c 51%, #f02f17 71%, #e73827 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: -webkit-linear-gradient(top, #f85032 0%, #f16f5c 50%,
+                    #f6290c 51%, #f02f17 71%, #e73827 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: linear-gradient(to bottom, #f85032 0%, #f16f5c 50%,
+                    #f6290c 51%, #f02f17 71%, #e73827 100%);
+            /* IE6-9 */
+            filter: progid:DXImageTransform.Microsoft.gradient (startC olorstr='#f85032', endColorstr='#e73827', GradientType=0);
         }
     </style>
 </head>
@@ -422,7 +509,8 @@
     </footer>
 
 
-    <p><pre>
+    <p>
+    <pre>
         (header)
             (h3)HTML5 기본(/h3)
         (/header)
@@ -446,7 +534,8 @@
         (footer)
             (span)서울특별시 강서구 내발산동(/span)
         (/footer)
-    </pre></p>
+    </pre>
+    </p>
 
     <hr>
     <h1> 이후부터는 CSS3에 관한 내용이다.</h1>
@@ -456,7 +545,8 @@
     <P>
         CSS는 홈페이지를 이루는 HTML과는 다른 문법이라고 할 수 있다. 보통 body가 아닌 head에 스타일을 삽입하거나, 불러오는 식으로 사용한다.
     </P>
-    <p><pre>
+    <p>
+    <pre>
         (head)
             (title)(/title)
             (style)
@@ -466,7 +556,8 @@
                 }
             (/style)
         (/head)
-    </pre></p>
+    </pre>
+    </p>
     <p>
         위의 상황에서 h1은 선택자이다. 선택자는 다음과 같다.
     </p>
@@ -498,7 +589,7 @@
     </table>
     <p>
         태그선택자의 경우 body, p, h1 {margin:0} 처럼 사용이 가능하다. <br><br>
-        아이디 선택자는 개별적인 하나의 것을 설정하기에 좋다.  아래는 활용이다.
+        아이디 선택자는 개별적인 하나의 것을 설정하기에 좋다. 아래는 활용이다.
     </p>
 
     <div id="ex1">
@@ -506,10 +597,10 @@
     </div>
     <div id="ex2">
         (div id = "ex2")의 태그 부여 후 스타일에서 width 800px; margin : 0 auto; overflow : hidden; 적용
-        <div id = "ex3">
+        <div id="ex3">
             (div id = "ex2")의 태그 부여 후 스타일에서 color : white; width 200px; float : left; background: blue; 적용
         </div>
-        <div id = "ex4">
+        <div id="ex4">
             (div id = "ex2")의 태그 부여 후 스타일에서 color : white; width 600px; float : left; background: green; 적용
         </div>
     </div>
@@ -526,10 +617,10 @@
             </legend>
             반응선택자 예시
         </fieldset>
-              
+
     </div>
     <P>위 코드의 경우 style만 적용하면 된다.<br>
-        작성은 div에 id="action"을 붙인 뒤, style에서 작성했다. 
+        작성은 div에 id="action"을 붙인 뒤, style에서 작성했다.
         <br>#action:hover { color : blue;}
         <br>#action:active { color : red;}
     </P>
@@ -538,107 +629,107 @@
     <h1>상태 선택자</h1>
     <p>
         상태선택자의 경우는 크게 4가지의 종류로 나눌 수 있다.
-        <table border = "1">
-            <thead>
-                <tr>
-                    <th>형태</th>
-                    <th>설명</th>
-                    <th>세부 설명</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>:checked</td>
-                    <td>체크 상태의 input 태그 선택</td>
-                    <td>type 속성이 checkbox or radio</td>
-                </tr>
-                <tr>
-                    <td>:focus</td>
-                    <td>포커스를 맞춘 input 태그 선택</td>
-                    <td>입력 양식에 focus가 돼있다. 페이지 1개당 1개만 사용할 수 있다.</td>
-                </tr>
-                <tr>
-                    <td>:enabled</td>
-                    <td>사용 가능한 input 태그 선택</td>
-                    <td>input 태그에 값을 입력 가능</td>
-                </tr>
-                <tr>
-                    <td>:disabled</td>
-                    <td>사용 불가능한 input 태그 선택</td>
-                    <td>input 태그에 값을 입력 불가능한 상태</td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        enabled, disabled <br>
-                        (input value="enabled") <br>
-                        (input value="disabled" disabled="disabled")
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        (style)<br>
-                            &nbsp;&nbsp;input:enabled {background-color : white;}<br>
-                            &nbsp;&nbsp;input:disabled {background-color: gray;}<br>
-                            &nbsp;&nbsp;input:focus {background-color: orange;}<br>
-                        (style)<br>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>형태</th>
+                <th>설명</th>
+                <th>세부 설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:checked</td>
+                <td>체크 상태의 input 태그 선택</td>
+                <td>type 속성이 checkbox or radio</td>
+            </tr>
+            <tr>
+                <td>:focus</td>
+                <td>포커스를 맞춘 input 태그 선택</td>
+                <td>입력 양식에 focus가 돼있다. 페이지 1개당 1개만 사용할 수 있다.</td>
+            </tr>
+            <tr>
+                <td>:enabled</td>
+                <td>사용 가능한 input 태그 선택</td>
+                <td>input 태그에 값을 입력 가능</td>
+            </tr>
+            <tr>
+                <td>:disabled</td>
+                <td>사용 불가능한 input 태그 선택</td>
+                <td>input 태그에 값을 입력 불가능한 상태</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    enabled, disabled <br>
+                    (input value="enabled") <br>
+                    (input value="disabled" disabled="disabled")
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    (style)<br>
+                    &nbsp;&nbsp;input:enabled {background-color : white;}<br>
+                    &nbsp;&nbsp;input:disabled {background-color: gray;}<br>
+                    &nbsp;&nbsp;input:focus {background-color: orange;}<br>
+                    (style)<br>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-        <input value="enabled">
-        <input value="disabled" disabled = "disabled">
+    <input value="enabled">
+    <input value="disabled" disabled="disabled">
     </p>
 
     <hr>
     <h1>구조 선택자</h1>
     <p>
-        <table border = "1">
-            <thead>
-                <tr>
-                    <th>
-                        형태
-                    </th>
-                    <th>
-                        설명
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        :first-child
-                    </td>
-                    <td>
-                        형제 관계 첫 번째 태그
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        :last-child
-                    </td>
-                    <td>
-                        형제 관계 마지막 태그
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        :nth-child(2n)
-                    </td>
-                    <td>
-                        형제 관계 2n번째 태그(2n+1 등으로 응용)
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        :nth-last-child(수열)
-                    </td>
-                    <td>
-                        형제 관계 뒤에서 (수열)번째 태그
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    형태
+                </th>
+                <th>
+                    설명
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    :first-child
+                </td>
+                <td>
+                    형제 관계 첫 번째 태그
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    :last-child
+                </td>
+                <td>
+                    형제 관계 마지막 태그
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    :nth-child(2n)
+                </td>
+                <td>
+                    형제 관계 2n번째 태그(2n+1 등으로 응용)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    :nth-last-child(수열)
+                </td>
+                <td>
+                    형제 관계 뒤에서 (수열)번째 태그
+                </td>
+            </tr>
+        </tbody>
+    </table>
     </p>
     <ul>
         <li>첫 번째</li>
@@ -652,7 +743,8 @@
         <li>세 번째</li>
         <li>네 번째</li>
     </ul>
-    <p><pre>
+    <p>
+    <pre>
         (ul)
             (li)첫 번째(/li)
             (li)두 번째(/li)
@@ -665,14 +757,15 @@
             (li)세 번째(/li)
             (li)네 번째(/li)
         (/ul)
-    </pre></p>
+    </pre>
+    </p>
     <p>
         위는 스타일을 적용한 것과 적용하지 않은 것의 차이이다.<br>
         아래는 스타일을 적용한 코드이다.<br><br>
         #ulexample{overflow : hidden;}<br>
         #ulexample>li{<br>
-            &nbsp;&nbsp;list-style :none;<br>
-            &nbsp;&nbsp;float: left; padding: 15px;<br>
+        &nbsp;&nbsp;list-style :none;<br>
+        &nbsp;&nbsp;float: left; padding: 15px;<br>
         }<br>
         #ulexample>li:first-child {border-radius : 10px 0 0 10px;}<br>
         #ulexample>li:last-child {border-radius : 0 10px 10px 0;}<br>
@@ -711,7 +804,236 @@
     </div>
 
     <hr>
-    <h1>다음에 계속,,</h1>
+    <h1>박스 속성</h1>
+    <img src="marginex.png" width="500" height="200">
+    <p>
+        실제 눈에 보이는 것은 글자와 border(테두리)밖에 없다.
+    <table border=1>
+        <thead>
+            <tr>
+                <th>
+                    형태
+                </th>
+                <th>
+                    설명
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    margin 속성
+                </td>
+                <td>
+                    테두리와 다른 태그 사이의 테두리 바깥쪽 여백
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    border 속성
+                </td>
+                <td>
+                    테두리
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    padding 속성
+                </td>
+                <td>
+                    테두리와 글자 사이의 테두리 안쪽 여백, 배경은 패딩까지 적용
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    width 속성
+                </td>
+                <td>
+                    글자를 감싸는 영역의 가로
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    height 속성
+                </td>
+                <td>
+                    글자를 감싸는 영역의 세로
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+
+    <p>
+        margin과 padding의 예시는 다음과 같다. 우측 위의 개발자도구를 활용하여 범위를 확인할 수 있다.
+    </p>
+    <div id="box">
+    </div>
+    <p>
+    <pre>
+    width: 100px; height: 100px;
+    background-color: red;
+
+    border: 20px solid black;
+    margin: 10px; padding: 30px;
+    </pre>
+    </p>
+    <p> 또한, margin(padding) : 0(위) 10(오른쪽) 0(아래) 10(왼쪽)으로 세부 설정도 가능하다.</p>
+    <img src="box_example.jpg" width=600 height=300>
+
+    <p>
+        박스 테두리의 경우는 다음과 같다.<br>
+        div class=box로 태그의 클래스를 붙인 뒤, 스타일에서 적용한다.<br>
+        <br> .box{<br>
+        굵기 : border-width : thick;(예시)<br>
+        형태 : border-style : dashed;(예시)<br>
+        색상 : border-color : black;(예시)<br>
+        둥근 테두리 : border-radius : 20px;(예시) > 5px 10px 5px 10px로 왼쪽 위부터 설정도 가능하다. <br>
+        }<br>
+        <br> 물론 left나 right를 통해 개별 설정도 가능하다.
+
+    </p>
+    <div class="box">
+        <p>Lorem ipsum dolor amet</p>
+    </div>
+
+    <hr>
+    <h1>오버플로우</h1>
+    <p>
+        p나 div와 같은 블록 수준의 경우 width나 height를 설정하면 박스를 벗어나는 경우가 생긴다.<br>
+        이때 스타일에 overflow를 설정함으로써 해결할 수 있다<br>
+        적용 예시는 아래의 사진을 확인하자.
+    </p>
+    <img src="overflow.jpg">
+
+    <hr>
+    <h1>가시 속성</h1>
+    <p>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>
+                    키워드
+                </td>
+                <td>
+                    설명
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    display : none
+                </td>
+                <td>
+                    보이지 않음
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    display : block
+                </td>
+                <td>
+                    블록 형식으로 지정
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    display : inline
+                </td>
+                <td>
+                    인라인 형식으로 저장(width나 height 적용 안됨)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    display : inline-block
+                </td>
+                <td>
+                    블록과 인라인의 중간(인라인처럼 동작하나 width등 적용)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+
+    <hr>
+    <h1>배경속성</h1>
+    <p>배경 속성은 아래의 코드를 참고하자.</p>
+    <p>
+    <pre>
+        body {
+            background-color: #E7E7E8;  //배경 색깔을 지정
+            background-image: url('BackgroundFront.png’), url('BackgroundBack.png'); //사진을 2개 넣음
+            background-size: 100%; //사진의 크기는 100%, 원본
+            background-repeat: no-repeat; //반복하지 않음
+            background-attachment: fixed; //화면 기준 이미지 위치 고정
+            background-position: 0px 50%; //사진의 위치 설정
+            }
+    </pre>
+    </p>
+
+    <hr>
+    <h1>글자속성</h1>
+    <p> 글자 속성의 태그를 나열하면 다음과 같다.
+        <br>font-family : A, B, C, D; //A없으면 B...D까지 폰트를 설정
+        <br>font-size : 32px; or 2em; of large;
+        <br>font-style : oblique(기울이기); or italic; //글자의 스타일(기울기 등) 지정
+        <br>font-weight : bold; or 700; //글자 굵기 지정
+    </p>
+    <p>
+        글자 정렬은 text-align : center or right 등으로 지정한다.<br>
+        단, span은 inline형식이어서 중앙이라는 개념이 없음
+    </p>
+
+    <hr>
+    <h1>위치 속성</h1>
+    <p>위치 속성의 태그는 아래와 같다.
+        <br>position : absolute //절대 위치 좌표 설정
+        <br>position : fixed //화면 기준 절대 위치 좌료 설정
+        <br>position : relative //초기 위치에서 상하좌우 이동
+        <br>position : static //위에서 아래로 순서 배치
+        <br>z-index : N //노출순서 설정(맨 앞으로 가기, 뒤로 가기)
+    </p>
+
+    <hr>
+    <h1>유동 속성</h1>
+    <p>
+        유동속성의 경우 블록 형식에서 태그를 섞일 수 있게 해준다 생각하면 된다.
+        <br> 태그의 경우는 해당 태그의 스타일에 float : left(right)를 붙인다.
+        <br> 그림과 같이 그림이 왼쪽으로 가는 걸 확인할 수 있다.
+    </p>
+
+    <img id="udong" src="dororo.jpg" width=100 height=100>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Proin ut quam feugiat, tincidunt dolor nec, iaculis dui.</p>
+
+    <p>
+    <pre>
+        (img id="udong" src="dororo.jpg") 
+        (p)Lorem ipsum dolor sit amet, consectetur adipiscing elit.(/p) 
+        (p)Proin ut quam feugiat, tincidunt dolor nec, iaculis dui.(/p)
+    </pre>
+    </p>
+
+    <hr>
+    <h1>그림자 속성</h1>
+    <div id="Shadow">
+        그림자 속성은 간단하게 구현이 가능하며, 중첩도 가능하다.
+        <br>box-shadow: 10px 10px 10px black;
+        <br>text-shadow: 10px 10px 10px black, 10px 10px 10px orange;<br><br>
+    </div>
+    <a href="http://css3generator.com">그림자는 css3generator에서 만들 수 있다.</a>
+
+    <hr>
+    <h1>그레이디언트 속성</h1>
+    <div>
+        그레이디언트는 Ultimate CSS Gradient Generator에서 생성한 후 코드를 복사하여 스타일에 적용한다.
+    </div>
+    <div id="gradient">
+        CSS3 그레이디언트
+    </div>
+
 
 
 </body>
