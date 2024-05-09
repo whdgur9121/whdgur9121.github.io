@@ -1,0 +1,14 @@
+{
+  "name": "sample-api",
+  "version": "1.0.0",
+  "description": "A sample api to help learn Node",
+  "main": "stocks-api.js",
+  "scripts": {
+    "test": "yes"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
